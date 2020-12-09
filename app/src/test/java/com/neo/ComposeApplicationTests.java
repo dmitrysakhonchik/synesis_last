@@ -2,6 +2,7 @@ package com.neo;
 
 import com.neo.entities.NginxStatus;
 import com.neo.services.NginxStatusService;
+import com.neo.services.ResponseService;
 import org.junit.Assert;
 import org.junit.Assume;
 import org.junit.Before;
@@ -13,24 +14,33 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ComposeApplicationTests {
+    ResponseService responseService;
     NginxStatusService nginxStatusService;
-    private NginxStatus nginxStatus;
 
     @Before
     public void initService() {
         nginxStatusService = new NginxStatusService();
+        responseService = new ResponseService();
     }
 
     @Test
     public void statusShouldBeNotNull() {
-        nginxStatus = nginxStatusService.getStatus("1 2 3 4 5 6 7 8 9 10");
+        NginxStatus nginxStatus = nginxStatusService.getStatus("1 2 3 4 5 6 7 8 9 10");
         Assume.assumeNotNull(nginxStatus);
     }
 
     @Test
-    public void statusShouldBeThrowException() {
-        nginxStatus = nginxStatusService.getStatus("a b c d e f g h i j");
+    public void responseShouldBeNotNull() {
+        String response = responseService.getResponseBodyFromNginx();
+        Assert.assertNotNull(response);
 
+    }
+
+    @Test
+    public void responseShouldByEmpty() {
+        String expected = "";
+        String actual = responseService.getResponseBodyFromNginx();
+        Assert.assertEquals(expected, actual);
     }
 
 

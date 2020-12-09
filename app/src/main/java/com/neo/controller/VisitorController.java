@@ -9,19 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class VisitorController {
-    private final NginxStatusService service;
+    private final NginxStatusService nginxStatusService;
     private final ResponseService responseService;
 
     @Autowired
     public VisitorController(NginxStatusService service, ResponseService responseService) {
-        this.service = service;
+        this.nginxStatusService = service;
         this.responseService = responseService;
     }
 
     @GetMapping("/nginx/statistics")
     public NginxStatus getNginxStatus() {
         String response = responseService.getResponseBodyFromNginx();
-        return service.getStatus(response);
+        return nginxStatusService.getStatus(response);
     }
 
 

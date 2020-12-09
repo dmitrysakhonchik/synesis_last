@@ -10,22 +10,31 @@ import java.util.Map;
 public class NginxStatusService {
 
     public NginxStatus getStatus(String nginxInfo) {
-        String[] inputInfo = nginxInfo.trim().split(" ");
         Map<String, Integer> requests = new HashMap<>();
+        String[] inputInfo;
+        int activeConnection = 0;
+        int accepts = 0;
+        int handled = 0;
+        int req = 0;
 
-        int activeConnection = Integer.parseInt(inputInfo[2]);
+        try {
+            inputInfo = nginxInfo.trim().split(" ");
 
-        int accepts = Integer.parseInt(inputInfo[7]);
+            activeConnection = Integer.parseInt(inputInfo[2]);
 
-        int handled = Integer.parseInt(inputInfo[8]);
+            accepts = Integer.parseInt(inputInfo[7]);
 
-        int req = Integer.parseInt(inputInfo[9]);
+            handled = Integer.parseInt(inputInfo[8]);
 
-        requests.put("accepts", accepts);
-        requests.put("handled", handled);
-        requests.put("requests", req);
+            req = Integer.parseInt(inputInfo[9]);
 
-
+        } catch (NullPointerException | NumberFormatException exception) {
+            System.out.println("Exception in NginxStatusService");
+        } finally {
+            requests.put("accepts", accepts);
+            requests.put("handled", handled);
+            requests.put("requests", req);
+        }
         return new NginxStatus(activeConnection, requests);
     }
 
