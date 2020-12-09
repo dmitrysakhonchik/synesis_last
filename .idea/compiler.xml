@@ -7,16 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dockercompose-springboot-mysql-nginx" />
+        <module name="sibbery-app" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="dockercompose-springboot-mysql-nginx" target="1.8" />
+      <module name="sibbery-app" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="dockercompose-springboot-mysql-nginx" options="-parameters" />
+      <module name="sibbery-app" options="-parameters" />
     </option>
   </component>
 </project>

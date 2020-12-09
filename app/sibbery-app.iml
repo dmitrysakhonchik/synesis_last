@@ -7,6 +7,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="dockercompose-springboot-mysql-nginx" />
+          <factory-entry name="sibbery-app" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
