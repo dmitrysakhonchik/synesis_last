@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.sakhonchik</groupId>
-	<artifactId>sybbery-application</artifactId>
+	<artifactId>synesis-application</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>sybbery-application</name>
-	<description>Demo project for Sybbery</description>
+	<name>synesis-application</name>
+	<description>Demo project for Synesis</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

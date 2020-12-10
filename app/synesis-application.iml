@@ -8,6 +8,8 @@
         <datasource-mapping>
           <factory-entry name="dockercompose-springboot-mysql-nginx" />
           <factory-entry name="sibbery-app" />
+          <factory-entry name="sybbery-application" />
+          <factory-entry name="synesis-application" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
