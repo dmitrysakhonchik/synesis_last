@@ -1,8 +1,8 @@
-package com.neo;
+package com.sakhonchik;
 
-import com.neo.entities.NginxStatus;
-import com.neo.services.NginxStatusService;
-import com.neo.services.ResponseService;
+import com.sakhonchik.entities.NginxStatus;
+import com.sakhonchik.services.NginxStatusService;
+import com.sakhonchik.services.ResponseService;
 import org.junit.Assert;
 import org.junit.Assume;
 import org.junit.Before;

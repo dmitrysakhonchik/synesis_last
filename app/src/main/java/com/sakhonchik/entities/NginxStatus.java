@@ -1,4 +1,4 @@
-package com.neo.entities;
+package com.sakhonchik.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

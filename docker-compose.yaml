@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx:
-   container_name: v-nginx2
+   container_name: nginxsrv
    image: nginx:latest
    restart: always
    ports:
@@ -12,7 +12,7 @@ services:
      - appnet
 
   app:
-    container_name: applic
+    container_name: application_container
     restart: always
     build: ./app
     working_dir: /app

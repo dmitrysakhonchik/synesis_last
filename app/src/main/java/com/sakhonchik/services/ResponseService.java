@@ -1,4 +1,4 @@
-package com.neo.services;
+package com.sakhonchik.services;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class ResponseService {
-    public static final String DUMMY_URL = "http://v-nginx2/nginx_status";
+    public static final String DUMMY_URL = "http://nginxsrv/nginx_status";
 
     public String getResponseBodyFromNginx() {
         RestTemplate restTemplate = new RestTemplate();

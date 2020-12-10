@@ -1,6 +1,6 @@
-package com.neo.services;
+package com.sakhonchik.services;
 
-import com.neo.entities.NginxStatus;
+import com.sakhonchik.entities.NginxStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
