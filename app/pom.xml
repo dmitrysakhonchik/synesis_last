@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.neo</groupId>
-	<artifactId>dockercompose-springboot-mysql-nginx</artifactId>
+	<groupId>com.sakhonchik</groupId>
+	<artifactId>sybbery-application</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>dockercompose-springboot-mysql-nginx</name>
-	<description>Demo project for Spring Boot</description>
+	<name>sybbery-application</name>
+	<description>Demo project for Sybbery</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
